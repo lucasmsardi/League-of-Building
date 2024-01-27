@@ -1,4 +1,5 @@
 import champions from "../../utils/champions";
+import "./Champion.css";
 
 const Champion = () => {
   return (
