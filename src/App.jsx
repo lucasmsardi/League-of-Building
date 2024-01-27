@@ -1,10 +1,11 @@
 import './App.css'
+import Champion from './components/Champion/Champion'
 
 function App() {
 
   return (
     <>
-    <h1>Hello World</h1>
+      <Champion />
     </>
   )
 }
