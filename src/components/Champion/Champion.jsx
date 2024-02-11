@@ -2,6 +2,7 @@ import champions from "../../utils/champions";
 import { useSelector, useDispatch } from "react-redux";
 import { updateSelectedChampion } from "../../features/championSlice";
 import "./Champion.css";
+import { calculateAS } from "../../features/mathSlice";
 
 const Champion = () => {
   const dispatch = useDispatch();
@@ -13,7 +14,10 @@ const Champion = () => {
           return (
             <li
               key={champion.id}
-              onClick={() => dispatch(updateSelectedChampion(champion))}
+              onClick={() => {
+                dispatch(updateSelectedChampion(champion))
+                dispatch(calculateAS(champion.bAS));
+              }}
             >
               <img
                 src={champion.img}
