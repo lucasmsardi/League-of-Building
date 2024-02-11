@@ -1,0 +1,5 @@
+.items-container ul {
+    margin-top: 100px;
+    display: flex;
+    gap: 10px;
+}
