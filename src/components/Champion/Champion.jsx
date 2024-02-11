@@ -18,7 +18,7 @@ const Champion = () => {
               <img
                 src={champion.img}
                 className={
-                  champion.id == isSelected.id && "selected-champion"
+                  champion.id == isSelected.id ? "selected-champion" : undefined
                 }
               ></img>
             </li>

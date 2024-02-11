@@ -3,3 +3,7 @@
     display: flex;
     gap: 10px;
 }
+
+.selected-item {
+    border: 2px solid red;
+}
