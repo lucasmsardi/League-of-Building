@@ -7,7 +7,7 @@ export const itemsSlice = createSlice({
   },
   reducers: {
     updateSelectedItem: (state, action) => {
-      state.value = state.value === 0 ? [...state.value, action.payload] : state.value.filter((item) => item.id !== action.payload.id);
+     state.value = [...state.value, action.payload]
     },
   },
 });

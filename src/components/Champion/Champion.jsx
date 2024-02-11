@@ -1,10 +1,11 @@
 import champions from "../../utils/champions";
-import { useDispatch } from "react-redux";
-import {  updateSelectedChampion} from "../../features/championSlice";
+import { useSelector, useDispatch } from "react-redux";
+import { updateSelectedChampion } from "../../features/championSlice";
 import "./Champion.css";
 
 const Champion = () => {
   const dispatch = useDispatch();
+  const isSelected = useSelector((state) => state.selectedChampion.value);
   return (
     <div className="champions-container">
       <ul>
@@ -14,7 +15,12 @@ const Champion = () => {
               key={champion.id}
               onClick={() => dispatch(updateSelectedChampion(champion))}
             >
-              <img src={champion.img}></img>
+              <img
+                src={champion.img}
+                className={
+                  champion.id == isSelected.id && "selected-champion"
+                }
+              ></img>
             </li>
           );
         })}

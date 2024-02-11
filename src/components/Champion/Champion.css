@@ -7,3 +7,7 @@ ul {
 li {
     cursor: pointer;
 }
+
+.selected-champion {
+    border: 2px solid red;
+}
